@@ -1,16 +1,17 @@
 import React from 'react';
-import { Button } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react';
+import EventDashboard from '../../features/events/eventDashboard/EventDashboard';
+import NavBar from '../../features/nav/NavBar';
 
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Re-vents</h1>
-      <button className='ui icon red button'>
-        <i className='user icon'/> CSS Button
-      </button>
-      <Button icon='user' contents='React Button' color='green'/>
-    </div>
+    <>
+      <NavBar/>
+      <Container className='main'>
+      <EventDashboard />
+      </Container>
+    </>
   );
 }
 
