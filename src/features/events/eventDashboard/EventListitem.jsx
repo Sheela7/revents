@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Icon, Item, List, Segment } from "semantic-ui-react";
 import EventListAttendee from "./EventListAttendee";
-
+import {format} from 'date-fns';
 export default function EventListItem({event}){
     return(
         <Segment.Group>
@@ -21,8 +21,9 @@ export default function EventListItem({event}){
 
             <Segment>
                 <span>
-                    <Icon name='clock'/> {event.date}
-                    <Icon name='clock'/> {event.venue}
+    <Icon name='clock' /> {format(event.date, 'MMMM d, yyyy h:mm a')}
+                    <Icon name='marker'/> {event.venue.address}
+
                 </span>
             </Segment>
 

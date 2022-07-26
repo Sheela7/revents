@@ -8,10 +8,10 @@ export default function EventList({events}){
             <EventListItem  event={event} key={event.id}/>
         ))}
         
+        {/* <EventListItem />
         <EventListItem />
         <EventListItem />
-        <EventListItem />
-        <EventListItem />
+        <EventListItem /> */}
         </>
     )
 }
