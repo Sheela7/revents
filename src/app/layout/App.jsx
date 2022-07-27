@@ -5,7 +5,7 @@ import NavBar from '../../features/nav/NavBar';
 
 
 export default function App() {
-  const [formOpen, setFormOpen] = useState(true);
+  const [formOpen, setFormOpen] = useState(false);
   return (
     <>
       <NavBar setFormOpen={setFormOpen}/>
