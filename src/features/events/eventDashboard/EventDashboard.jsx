@@ -25,7 +25,7 @@ export default function EventDashboard({ formOpen, setFormOpen, selectEvent, sel
   return (
     <Grid>
       <Grid.Column width={10}>
-        <EventList events={events} selectEvent={selectEvent} deteteEvent={handleDeleteEvent}/>
+        <EventList events={events} selectEvent={selectEvent} deleteEvent={handleDeleteEvent}/>
       </Grid.Column>
       <Grid.Column width={6}>
         {formOpen && (
