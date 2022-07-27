@@ -21,7 +21,7 @@ export default function EventListItem({event}){
 
             <Segment>
                 <span>
-    <Icon name='clock' /> {format(event.date, 'MMMM d, yyyy h:mm a')}
+    {/* <Icon name='clock' /> {format(event.date, 'MMMM d, yyyy h:mm a')} */}
                     <Icon name='marker'/> {event.venue.address}
 
                 </span>
@@ -32,8 +32,6 @@ export default function EventListItem({event}){
                     {event.attendees.map(attendee => (
                         <EventListAttendee key={attendee.id} attendee={attendee}/>
                     ))}
-                    
-                 
                 </List>
             </Segment>
 

@@ -32,7 +32,7 @@ export default function EventForm({ setFormOpen, setEvents, createEvent }) {
   return (
     <Segment clearing>
       <Header content='Create new event' />
-      <Form onSubmit={handleFormSubmit}>
+      <Form onSubmit={ handleFormSubmit}>
         <Form.Field>
           <input
             type='text'
