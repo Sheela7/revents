@@ -4,7 +4,7 @@ import EventForm from '../eventForm/EventForm';
 import EventList from './EventList';
 import { sampleData } from '../../../app/api/sampleData';
 
-export default function EventDashboard(formOpen, setFormOpen){
+export default function EventDashboard({formOpen, setFormOpen}){
     const [events, setEvents] = useState(sampleData);
     
     return (
