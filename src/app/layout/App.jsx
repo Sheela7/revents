@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 import EventDashboard from "../../features/events/eventDashboard/EventDashboard";
 import EventDetailedPage from "../../features/events/eventDetailed/EventDetailedPage";
@@ -24,7 +24,13 @@ export default function App() {
     <>
       <NavBar setFormOpen={handleCreateFormOpen} />
       <Container className='main'>
-        <HomePage/>
+        <Routes>
+        <Route exact path='/' component={HomePage} />
+        <Route path='/events' component={EventDashboard}/>
+        <Route path='/events/:id' component={EventDetailedPage}/>
+        <Route path='/createEvent' component={EventForm}/>
+        </Routes>
+       
       </Container>
     </>
   );
