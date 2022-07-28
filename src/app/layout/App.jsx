@@ -22,11 +22,13 @@ export default function App() {
 
   return (
     <>
+      <Routes>
+        <Route exact path='/' element={<HomePage/>}/>
+      </Routes>
       <NavBar setFormOpen={handleCreateFormOpen} />
       <Container className='main'>
         <Routes>
-        <Route exact path='/' element={<HomePage/>}/>
-        <Route exact path='/events' element={<EventDashboard/>}/>
+        <Route path='/events' element={<EventDashboard/>}/>
         <Route path='/events/:id' element={<EventDetailedPage/>}/>
         <Route path='/createEvent' element={<EventForm/>}/>
         </Routes>
